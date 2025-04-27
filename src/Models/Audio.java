@@ -2,10 +2,44 @@ package Models;
 
 public class Audio {
     private String titulo;
-    private String classificacao;
+    // Classificação é sobre um rank
+    private int classificacao;
     private int totalDeCurtidas;
     private int totalDeReproducoes;
-    private double duracao;
+    private int duracaoEmMinutos;
+
+    // Metodos para curtir os Audios
+
+    public void curtir(){
+        this.totalDeCurtidas ++;
+    }
+
+    public void reproduzir(){
+        this.totalDeReproducoes ++;
+    }
+
+    // Metodos para simular Visualizaçoes e Curtidas
+
+    public void simularReproduçoes(int reproduçoes){
+        for (int i = 0; i < reproduçoes ; i++) {
+            this.reproduzir();
+        }
+    }
+
+    public void simularCurtidas(int curtidas){
+        for (int i = 0; i < curtidas ; i++) {
+            this.curtir();
+        }
+    }
+
+    // Metodo para apresentar um Audio
+
+    public void apresentarAudio(){
+        System.out.println("Nome: "+ getTitulo());
+        System.out.println("Total de reproduçoes: "+ getTotalDeReproducoes());
+        System.out.println("Total de curtidas: "+ getTotalDeCurtidas());
+    }
+
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
@@ -15,14 +49,12 @@ public class Audio {
         return titulo;
     }
 
-    public void setClassificacao(String classificacao) {
-        this.classificacao = classificacao;
-    }
-
-    public String getClassificacao() {
+    public int getClassificacao() {
         return classificacao;
     }
 
+    // Os Setters das curtidas e reproduçoes nao sao criados para evitar modificaçoes invalidas
+    // As curtidas e reproduçoes so podem ser alterados atraves dos metodos
     public int getTotalDeCurtidas() {
         return totalDeCurtidas;
     }
@@ -31,18 +63,13 @@ public class Audio {
         return totalDeReproducoes;
     }
 
-    public void setDuracao(double duracao) {
-        this.duracao = duracao;
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        if (duracaoEmMinutos > 0){
+            this.duracaoEmMinutos = duracaoEmMinutos;
+        }
     }
 
-    public double getDuracao() {
-        return duracao;
-    }
-
-    public void curtir(){
-        this.totalDeCurtidas ++;
-    }
-    public void reproduzir(){
-        this.totalDeReproducoes ++;
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
     }
 }

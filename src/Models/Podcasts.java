@@ -3,9 +3,18 @@ package Models;
 public class Podcasts extends Audio{
     private String nomeDoEpisodio;
     private int numeroDoEpisodio;
-    private String canal;
     private String apresentador;
     private String descricao;
+
+    @Override
+    public void apresentarAudio() {
+            System.out.println("Podcast: " + getTitulo());
+            System.out.println("Apresentador: " + getApresentador());
+            System.out.println("Episódio: " + getNumeroDoEpisodio() + " - " + getNomeDoEpisodio());
+            System.out.println("Descrição: " + getDescricao());
+            System.out.println("Total de curtidas: " + getTotalDeCurtidas());
+            System.out.println("Total de reproduções: " + getTotalDeReproducoes());
+    }
 
     public String getNomeDoEpisodio() {
         return nomeDoEpisodio;
@@ -21,14 +30,6 @@ public class Podcasts extends Audio{
 
     public void setNumeroDoEpisodio(int numeroDoEpisodio) {
         this.numeroDoEpisodio = numeroDoEpisodio;
-    }
-
-    public String getCanal() {
-        return canal;
-    }
-
-    public void setCanal(String canal) {
-        this.canal = canal;
     }
 
     public String getApresentador() {
