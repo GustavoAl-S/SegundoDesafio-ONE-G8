@@ -6,6 +6,15 @@ public class Podcasts extends Audio{
     private String apresentador;
     private String descricao;
 
+    public Podcasts(String titulo, int totalDeCurtidas, int totalDeReproducoes, int duracaoEmMinutos, String nomeDoEpisodio, int numeroDoEpisodio,
+                    String apresentador, String descricao) {
+        super(titulo, totalDeCurtidas, totalDeReproducoes, duracaoEmMinutos);
+        this.nomeDoEpisodio = nomeDoEpisodio;
+        this.numeroDoEpisodio = numeroDoEpisodio;
+        this.apresentador = apresentador;
+        this.descricao = descricao;
+    }
+
     @Override
     public void apresentarAudio() {
             System.out.println("Podcast: " + getTitulo());
