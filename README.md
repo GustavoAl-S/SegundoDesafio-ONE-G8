@@ -1,4 +1,4 @@
-# Projeto Java: Simulador de Audios
+# 🎵 Projeto Java: Simulador de Audios
 
 Este projeto Java é uma aplicação orientada a objetos que simula interações com mídias de áudio, como músicas e podcasts.
 
