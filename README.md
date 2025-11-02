@@ -4,21 +4,21 @@ Este projeto Java é uma aplicação orientada a objetos que simula interações
 
 O objetivo foi praticar os conceitos de herança, encapsulamento e polimorfismo em Java.
 
-## 🧠 Conceitos Aplicados
+## Conceitos Aplicados
  - Herança: Musicas e Podcasts estendem a classe base Audio.
 
  - Encapsulamento: Uso de getters/setters e controle de acesso.
 
  - Polimorfismo: Sobrescrita do método apresentarAudio().
 
-## 🚀 Funcionalidades
+## Funcionalidades
 - Simulação de curtidas e reproduções em mídias de áudio.
 
 - Exibição de informações específicas para músicas e podcasts.
 
 - Reaproveitamento de código com herança e abstração de comportamentos comuns.
 
-## 🧪 Exemplo de Uso
+## Exemplo de Uso
 
 ![Image](https://github.com/user-attachments/assets/8c5a4ee6-b7de-4746-a369-a110c2ed9a72)
 
@@ -31,3 +31,4 @@ O objetivo foi praticar os conceitos de herança, encapsulamento e polimorfismo 
 - IntelliJ IDEA
 
 Feito com 💻 e ☕ por Gustavo Alves.
+
